@@ -17,7 +17,4 @@ app.use('/user',userRouter)
 
 //引入跨域模块
 
-
-
-
 app.listen(3000)

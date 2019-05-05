@@ -9,9 +9,7 @@
             <input type='password' placeholder="please input password" v-model="pwd"/><br>
             <input type='button' @click="btnLogin"   value="Login" />
         </form>
-
     </div>
-    
 </template>
 <script>
 import {Toast} from 'mint-ui'

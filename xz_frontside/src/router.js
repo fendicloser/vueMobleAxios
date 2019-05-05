@@ -3,11 +3,21 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './components/tabbar/Login.vue'
 import signUp from './components/tabbar/signUp.vue'
+import swipe from './components/mintUITry.vue'
 
+import tryParam from './views/tryParam.vue'
 Vue.use(Router)
 
 export default new Router({
   routes: [
+    {
+      path:'/tryParam',
+      component:tryParam
+    },
+    {
+      path:'/swipe',
+      component:swipe
+    },
     {
       path:'/signUp',
       component:signUp

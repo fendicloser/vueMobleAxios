@@ -3,8 +3,12 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
+      <mt-button @click="Login">Login</mt-button> |
+      
       <button @click="Login">Login</button> |
-      <button @click="signUp">signUp</button>
+      <button @click="signUp">signUp</button> |
+      <mt-button type="primary" @click="swipe">swipe</mt-button> |
+      <mt-button type='primary' @click='tryParam'>try param</mt-button>
     </div>
     <router-view/>
   </div>
@@ -12,7 +16,15 @@
 
 <script>
 export default {
+  
   methods:{
+    tryParam(){
+      
+      this.$router.push({path:'/tryParam'})
+    },
+    swipe(){
+      this.$router.push({path:'/swipe'})
+    },
     Login(){
       this.$router.push({path:'/Login'})
     },
@@ -22,7 +34,6 @@ export default {
   }
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
