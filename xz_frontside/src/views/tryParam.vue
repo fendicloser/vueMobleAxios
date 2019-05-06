@@ -1,5 +1,8 @@
 <template>
-    <div>{{tryParamData}}
+    <div>
+        <div @click="tar" :data-i="1">_________________</div>
+        
+        {{tryParamData}}
         {{type}}
         <mt-button @click='sum'>sum</mt-button>
         <ul >
@@ -31,13 +34,18 @@ export default {
       })
     },
     methods:{
+        tar(e){
+            console.log(e.target.dataset.i)
+        },
         sum(e){
             //console.log(this.$refs.number)
             var sum=0
             for(var i in this.$refs.number){
+                console.log(this.$refs.number[i])
      
                 if(!this.$refs.number[i].isDeleted){
                     sum=sum+this.$refs.number[i].number
+                    
                 }
                 
             }
